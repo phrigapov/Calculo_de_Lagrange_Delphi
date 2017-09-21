@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2007/04/26 10:25:36.909.pas,c:\paulo\Borland Studio Projects\Unit1.pas=c:\paulo\Projeto\lagrange\UPrincipal.pas</Transaction>
+    <Transaction>2007/04/26 10:25:36.925.dfm,c:\paulo\Borland Studio Projects\Unit1.dfm=c:\paulo\Projeto\lagrange\UPrincipal.dfm</Transaction>
+    <Transaction>2007/04/26 10:25:42.520.bdsproj,c:\paulo\Borland Studio Projects\Project1.bdsproj=c:\paulo\Projeto\lagrange\dprPrincipal.bdsproj</Transaction>
+    <Transaction>2007/04/27 15:32:42.860.pas,c:\paulo\Projeto\lagrange\UPrincipal.pas=</Transaction>
+    <Transaction>2007/04/27 15:32:42.860.dfm,c:\paulo\Projeto\lagrange\UPrincipal.dfm=</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,156 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = ':: Lagrange ::'
+  ClientHeight = 612
+  ClientWidth = 960
+  Color = clWhite
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  WindowState = wsMaximized
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 56
+    Top = 23
+    Width = 32
+    Height = 24
+    Caption = 'N ='
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object SpeedButton1: TSpeedButton
+    Left = 208
+    Top = 23
+    Width = 57
+    Height = 28
+    Caption = 'Ok!'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = SpeedButton1Click
+  end
+  object edtN: TEdit
+    Left = 104
+    Top = 24
+    Width = 73
+    Height = 27
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+  end
+  object DBChart1: TDBChart
+    Left = 40
+    Top = 208
+    Width = 873
+    Height = 396
+    BackWall.Brush.Color = clWhite
+    BackWall.Brush.Style = bsClear
+    BottomWall.Size = 5
+    Gradient.EndColor = 14671839
+    Gradient.Visible = True
+    LeftWall.Brush.Color = clWhite
+    LeftWall.Brush.Style = bsBDiagonal
+    LeftWall.Color = clSilver
+    LeftWall.Size = 5
+    MarginBottom = 0
+    MarginLeft = 0
+    MarginRight = 0
+    MarginTop = 0
+    Title.Color = clWhite
+    Title.Text.Strings = (
+      'Gr'#225'fico')
+    Chart3DPercent = 100
+    View3D = False
+    View3DOptions.Elevation = 322
+    View3DOptions.HorizOffset = -19
+    View3DOptions.Perspective = 16
+    BevelInner = bvLowered
+    BevelOuter = bvNone
+    Color = clWhite
+    TabOrder = 1
+    object Series1: TPointSeries
+      ColorEachPoint = True
+      Marks.ArrowLength = 0
+      Marks.Frame.Visible = False
+      Marks.Style = smsValue
+      Marks.Transparent = True
+      Marks.Visible = False
+      DataSource = ADOQuery1
+      SeriesColor = clRed
+      XLabelsSource = 'x'
+      Pointer.Brush.Color = 12615808
+      Pointer.InflateMargins = True
+      Pointer.Style = psCircle
+      Pointer.Visible = True
+      XValues.DateTime = False
+      XValues.Name = 'X'
+      XValues.Multiplier = 1.000000000000000000
+      XValues.Order = loAscending
+      XValues.ValueSource = 'x'
+      YValues.DateTime = False
+      YValues.Name = 'Y'
+      YValues.Multiplier = 1.000000000000000000
+      YValues.Order = loNone
+      YValues.ValueSource = 'px'
+    end
+  end
+  object BitBtn1: TBitBtn
+    Left = 296
+    Top = 24
+    Width = 105
+    Height = 27
+    Caption = 'Calcula!'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+    OnClick = BitBtn1Click
+  end
+  object ADOConnection1: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=c:\paulo\Projeto\la' +
+      'grange\saida.mdb;Persist Security Info=False'
+    LoginPrompt = False
+    Mode = cmShareDenyNone
+    Provider = 'Microsoft.Jet.OLEDB.4.0'
+    Left = 112
+    Top = 112
+  end
+  object ADOQuery1: TADOQuery
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'select * from saida')
+    Left = 152
+    Top = 112
+    object ADOQuery1x: TFloatField
+      FieldName = 'x'
+    end
+    object ADOQuery1px2: TFloatField
+      FieldName = 'px'
+    end
+  end
+end
